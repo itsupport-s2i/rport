@@ -13,7 +13,7 @@ RUN set -e \
     && tar xzf rportd.tar.gz rportd
 
 RUN set -e \
-    && wget https://downloads.rport.io/frontend/stable/rport-frontend-stable-${FRONTEND_BUILD}.zip -O frontend.zip \
+    && wget https://downloads.rport.io/frontend/stable/rport-frontend-${FRONTEND_BUILD}.zip -O frontend.zip \
     && unzip frontend.zip -d ./frontend
 
 RUN set -e \
