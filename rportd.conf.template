@@ -1,18 +1,12 @@
-[server]
-  address = "${SERVER_ADDRESS:-0.0.0.0:8080}"
-  url = "${SERVER_URL:-http://0.0.0.0:8080}"
-  key_seed = "${SERVER_KEY_SEED:-}"
-  auth = "${SERVER_AUTH:-}"
-  auth_file = "${SERVER_AUTH_FILE:-}"
-  data_dir = "${SERVER_DATA_DIR:-/var/lib/rport}"
-  tunnel_proxy_cert_file = "${SERVER_TUNNEL_PROXY_CERT_FILE:-}"
-  tunnel_proxy_key_file = "${SERVER_TUNNEL_PROXY_KEY_FILE:-}"
-  novnc_root = "${SERVER_NOVNC_ROOT:-}"
+    [server]
+      address = "0.0.0.0:8080"
+      url = ["https://rport.impress.dental/ws"]
+      key_seed = "98fb5a5320ca22eeac0125a1dc257e13486c"
+      auth = "user:Moscow123!"
+      data_dir = "/var/lib/rport"
+      email = "admin@smile2impress.com"
 
-[api]
-  address = "${API_ADDRESS:-0.0.0.0:3000}"
-  auth = "${API_AUTH:-}"
-  doc_root = "${API_DOC_ROOT:-/var/www/html}"
-
-[monitoring]
-  data_storage_days = ${MONITORING_DATA_STORAGE_DAYS:-}
+    [api]
+      address = "0.0.0.0:3000"
+      auth = "impress:BlackWorld2023!"
+      doc_root = "/var/www/html"

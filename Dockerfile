@@ -1,15 +1,15 @@
 FROM alpine:3.15 as downloader
 
-ARG RPORT_VERSION=0.6.0
-ARG FRONTEND_BUILD=0.6.0-build-966
-ARG NOVNC_VERSION=1.3.0
+ARG RPORT_VERSION=0.9.12
+ARG FRONTEND_BUILD=0.9.12-17-build-1145
+ARG NOVNC_VERSION=1.4.0
 
 RUN apk add unzip
 
 WORKDIR /app/
 
 RUN set -e \
-    && wget https://github.com/cloudradar-monitoring/rport/releases/download/${RPORT_VERSION}/rportd_${RPORT_VERSION}_Linux_$(uname -m).tar.gz -O rportd.tar.gz \
+    && wget https://github.com/realvnc-labs/rport/releases/download/${RPORT_VERSION}/rportd_${RPORT_VERSION}_Linux_$(uname -m).tar.gz -O rportd.tar.gz \
     && tar xzf rportd.tar.gz rportd
 
 RUN set -e \
