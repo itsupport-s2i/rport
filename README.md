@@ -1,15 +1,3 @@
-# rport image
-[![Docker](https://github.com/yusufhm/rport-image/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/yusufhm/rport-image/actions/workflows/docker-publish.yml)
-
-Docker/kubernetes image for the excellent [rport.io](https://github.com/cloudradar-monitoring/rport) remote systems manager.
-
-## Multi-arch
-
-Currently builds images for
-
- - linux/amd64
- - linux/arm64
-
 ## Configuration via environment variables
 
 Configuration can always be provided by mounting a `/etc/rport/rportd.conf` file, or you can provide the following environment variables which will populate the file from [this template](/rportd.conf.template). See [rportd.example.conf](https://github.com/cloudradar-monitoring/rport/blob/master/rportd.example.conf) for all available configuration.
